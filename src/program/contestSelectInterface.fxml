@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0"
+			prefWidth="360.0" xmlns="http://javafx.com/javafx/8.0.40" fx:controller="program.ContestSelectController">
+	<children>
+		<GridPane prefHeight="640.0" prefWidth="360.0">
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+			</rowConstraints>
+			<children>
+				<ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0"
+							vbarPolicy="ALWAYS">
+					<content>
+						<VBox fx:id="VBoxContestList" minHeight="-Infinity" minWidth="-Infinity"/>
+					</content>
+				</ScrollPane>
+			</children>
+		</GridPane>
+	</children>
+</AnchorPane>

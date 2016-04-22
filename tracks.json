@@ -1,0 +1,92 @@
+[
+	{
+		"trackName": "Test Track 1",
+		"trackLength": 100000,
+		"difficulty": "Very easy",
+		"startDate": 1461319200,
+		"endDate": 1463911200,
+		"sponsors": "Nerps!",
+		"trackID": 1
+	},
+	{
+		"trackName": "Test Track 2",
+		"trackLength": 200000,
+		"difficulty": "Very Easy",
+		"startDate": 1461319200,
+		"endDate": 1463911200,
+		"sponsors": "Nerps!",
+		"trackID": 2
+	},
+	{
+		"trackName": "Test Track 3",
+		"trackLength": 300000,
+		"difficulty": "Easy",
+		"startDate": 1461319200,
+		"endDate": 1463911200,
+		"sponsors": "Nerps!",
+		"trackID": 3
+	},
+	{
+		"trackName": "Test Track 4",
+		"trackLength": 400000,
+		"difficulty": "Easy",
+		"startDate": 1461319200,
+		"endDate": 1463911200,
+		"sponsors": "Nerps!",
+		"trackID": 4
+	},
+	{
+		"trackName": "Test Track 5",
+		"trackLength": 500000,
+		"difficulty": "Moderate",
+		"startDate": 1461319200,
+		"endDate": 1463911200,
+		"sponsors": "Nerps!",
+		"trackID": 5
+	},
+	{
+		"trackName": "Test Track 6",
+		"trackLength": 600000,
+		"difficulty": "Moderate",
+		"startDate": 1461319200,
+		"endDate": 1463911200,
+		"sponsors": "Nerps!",
+		"trackID": 6
+	},
+	{
+		"trackName": "Test Track 7",
+		"trackLength": 700000,
+		"difficulty": "",
+		"startDate": 1461319200,
+		"endDate": 1463911200,
+		"sponsors": "Nerps!",
+		"trackID": 7
+	},
+	{
+		"trackName": "Test Track 8",
+		"trackLength": 800000,
+		"difficulty": "Hard",
+		"startDate": 1461319200,
+		"endDate": 1463911200,
+		"sponsors": "Nerps!",
+		"trackID": 8
+	},
+	{
+		"trackName": "Test Track 9",
+		"trackLength": 900000,
+		"difficulty": "Hard",
+		"startDate": 1461319200,
+		"endDate": 1463911200,
+		"sponsors": "Nerps!",
+		"trackID": 9
+	},
+	{
+		"trackName": "Test Track 10",
+		"trackLength": 1000000,
+		"difficulty": "Very Hard",
+		"startDate": 1461319200,
+		"endDate": 1463911200,
+		"sponsors": "Nerps!",
+		"trackID": 10
+	}
+]
