@@ -8,47 +8,43 @@
 <?import javafx.scene.layout.*?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0"
 			prefWidth="360.0" xmlns="http://javafx.com/javafx/null" fx:controller="program.LoginController">
-	<children>
-		<GridPane alignment="CENTER" layoutX="40.0" layoutY="245.0" prefHeight="90.0" prefWidth="280.0">
-			<columnConstraints>
-				<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
-			</columnConstraints>
-			<rowConstraints>
-				<RowConstraints minHeight="-Infinity" prefHeight="50.0" valignment="CENTER" vgrow="SOMETIMES"/>
-				<RowConstraints minHeight="-Infinity" prefHeight="50.0" valignment="CENTER" vgrow="SOMETIMES"/>
-				<RowConstraints minHeight="-Infinity" prefHeight="50.0" valignment="CENTER" vgrow="SOMETIMES"/>
-			</rowConstraints>
-			<children>
-				<Button fx:id="btnLogin" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
-						minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#login"
-						text="Log In" GridPane.rowIndex="2">
-					<padding>
-						<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
-					</padding>
-					<GridPane.margin>
-						<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
-					</GridPane.margin>
-				</Button>
-				<TextField alignment="CENTER" layoutX="10.0" layoutY="43.0" maxHeight="1.7976931348623157E308"
-						   maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity"
-						   promptText="Username">
-					<padding>
-						<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
-					</padding>
-					<GridPane.margin>
-						<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
-					</GridPane.margin>
-				</TextField>
-				<PasswordField alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
-							   minHeight="-Infinity" minWidth="-Infinity" promptText="Password" GridPane.rowIndex="1">
-					<padding>
-						<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
-					</padding>
-					<GridPane.margin>
-						<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
-					</GridPane.margin>
-				</PasswordField>
-			</children>
-		</GridPane>
-	</children>
+	<GridPane alignment="CENTER" layoutX="40.0" layoutY="245.0" prefHeight="90.0" prefWidth="280.0">
+		<columnConstraints>
+			<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+		</columnConstraints>
+		<rowConstraints>
+			<RowConstraints minHeight="-Infinity" prefHeight="50.0" valignment="CENTER" vgrow="SOMETIMES"/>
+			<RowConstraints minHeight="-Infinity" prefHeight="50.0" valignment="CENTER" vgrow="SOMETIMES"/>
+			<RowConstraints minHeight="-Infinity" prefHeight="50.0" valignment="CENTER" vgrow="SOMETIMES"/>
+		</rowConstraints>
+		<Button fx:id="btnLogin" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+				minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#login"
+				text="Log In" GridPane.rowIndex="2">
+			<padding>
+				<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+			</padding>
+			<GridPane.margin>
+				<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+			</GridPane.margin>
+		</Button>
+		<TextField alignment="CENTER" layoutX="10.0" layoutY="43.0" maxHeight="1.7976931348623157E308"
+				   maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity"
+				   promptText="Username">
+			<padding>
+				<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+			</padding>
+			<GridPane.margin>
+				<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+			</GridPane.margin>
+		</TextField>
+		<PasswordField alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+					   minHeight="-Infinity" minWidth="-Infinity" promptText="Password" GridPane.rowIndex="1">
+			<padding>
+				<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+			</padding>
+			<GridPane.margin>
+				<Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+			</GridPane.margin>
+		</PasswordField>
+	</GridPane>
 </AnchorPane>

@@ -3,7 +3,6 @@ package program;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
@@ -20,8 +19,8 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
-import jsonObjects.contestObject;
-import jsonObjects.contestant;
+import jsonObjects.Contestant;
+import jsonObjects.Track;
 
 import java.io.File;
 import java.io.IOException;
@@ -35,8 +34,8 @@ import static javafx.geometry.HPos.RIGHT;
 
 public class ContestSelectController implements Initializable {
 	public VBox VBoxContestList;
-	private List<contestObject> contests;
-	private contestant user;
+	private List<Track> contests;
+	private Contestant user;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -45,12 +44,10 @@ public class ContestSelectController implements Initializable {
 	}
 
 	private void loadTracks() {
-		for(contestObject contest : contests) {
-			makePane(contest);
-		}
+		contests.forEach(this::makePane);
 	}
 
-	private void makePane(contestObject contest) {
+	private void makePane(Track contest) {
 		GridPane gridPane = new GridPane();
 		gridPane.setPadding(new Insets(5, 5, 5, 5));
 		gridPane.setHgap(5);
@@ -81,29 +78,21 @@ public class ContestSelectController implements Initializable {
 
 		Button btnJoin = new Button("Join");
 		btnJoin.setId("" + contest.getTrackID());
-		btnJoin.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent event) {
-				joinTrack(event);
-			}
-		});
+		btnJoin.setOnAction(this::joinTrack);
 		gridPane.add(btnJoin, 1, 0, 1, 2);
 
 		Button btnJoinAnon = new Button("Join as anonymous");
 		btnJoinAnon.setTextAlignment(TextAlignment.CENTER);
 		btnJoinAnon.setWrapText(true);
 		btnJoinAnon.setId("" + contest.getTrackID());
-		btnJoinAnon.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent event) {
-				user.setAnon(true);
-				joinTrack(event);
-			}
+		btnJoinAnon.setOnAction(event -> {
+			user.setAnon(true);
+			joinTrack(event);
 		});
 		gridPane.add(btnJoinAnon, 1, 2, 1, 2);
 		gridPane.getColumnConstraints().get(1).setHalignment(RIGHT);
 		VBoxContestList.getChildren().add(gridPane);
-		VBoxContestList.setVgrow(gridPane, Priority.ALWAYS);
+		VBox.setVgrow(gridPane, Priority.ALWAYS);
 		VBoxContestList.getChildren().add(new Separator());
 	}
 
@@ -118,6 +107,7 @@ public class ContestSelectController implements Initializable {
 			e.printStackTrace();
 		}
 		stage.setTitle("Status Interface");
+		assert root != null;
 		Scene scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
@@ -139,13 +129,13 @@ public class ContestSelectController implements Initializable {
 		File contestFile = new File("tracks.json");
 		File userFile = new File("user.json");
 		try {
-			contests = mapper.readValue(contestFile, new TypeReference<List<contestObject>>() {
+			contests = mapper.readValue(contestFile, new TypeReference<List<Track>>() {
 			});
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
 		try {
-			user = mapper.readValue(userFile, new TypeReference<contestant>() {
+			user = mapper.readValue(userFile, new TypeReference<Contestant>() {
 			});
 		} catch(IOException e) {
 			e.printStackTrace();

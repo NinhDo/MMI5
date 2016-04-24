@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonPropertyOrder({"name", "anon", "id", "distance", "achievements", "trackID"})
-public class contestant {
+public class Contestant {
 	private String name = "Unknown Runner";
 	private boolean anon = false;
 	private int id = 1;
@@ -12,7 +12,7 @@ public class contestant {
 	private int achievements = 0;
 	private int trackID = 0;
 
-	public contestant() {
+	public Contestant() {
 	}
 
 	@JsonProperty("name")

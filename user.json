@@ -1,8 +1,8 @@
 {
-	"name": "You",
-	"anon": false,
-	"id": 0,
-	"distance": 0,
-	"achievements": 0,
-	"trackID": 1
+  "name": "You",
+  "anon": true,
+  "id": 0,
+  "distance": 34561,
+  "achievements": 3,
+  "trackID": 2
 }
